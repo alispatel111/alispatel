@@ -85,7 +85,7 @@
     "techIcons": ["/assets/icons/mongodb.png", "/assets/icons/express.png", "/assets/icons/react.png"]
   },
   {
-  "key": 7,
+  "key": 8,
   "title": "Weather Forecast App",
   "description": "A responsive weather application built using React, HTML, CSS, and JavaScript. Fetches real-time weather data from an external API. Displays temperature, humidity, wind speed, and weather conditions based on user location or city search. Clean UI with responsive design.",
   "imageSrc": "/assets/hero/weather.jpg", 
