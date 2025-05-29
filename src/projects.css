@@ -1273,3 +1273,34 @@
     transition: none;
   }
 }
+
+
+
+.enhanced-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, filter;
+  opacity: 0.6; /* Start with lower opacity */
+  filter: blur(5px); /* Start with blur effect */
+}
+
+.enhanced-project-image.loaded {
+  opacity: 1; /* Fade in when loaded */
+  filter: blur(0); /* Remove blur when loaded */
+}
+
+/* Add will-change for better performance on animations */
+.enhanced-project-card,
+.enhanced-project-card-inner,
+.enhanced-project-image,
+.enhanced-project-overlay {
+  will-change: transform, opacity;
+}
+
+/* Add content-visibility for better rendering performance */
+.enhanced-project-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 550px;
+}

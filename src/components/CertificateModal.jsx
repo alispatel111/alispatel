@@ -1,18 +1,17 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
+import { Dialog } from "@headlessui/react"
 
-const CertificateModal = ({ skill, onClose, level }) => {
-  const modalRef = useRef(null)
+const CertificateModal = ({ isOpen, onClose, skill }) => {
   const [isDownloading, setIsDownloading] = useState(false)
-  const [pdfLoaded, setPdfLoaded] = useState(false)
 
-  // Get the PDF path based on skill title
+  // Fix the certificate path issue by using public URLs instead of relative paths
   const getPdfPath = (skillTitle) => {
     const pdfMap = {
       HTML: "/src/pdf/html_certificate.pdf",
       CSS: "/src/pdf/css_certificate.pdf",
-      Javascript: "/src/pdf/javascript_certificate.pdf",
+      Javascript: "/src/pdf/Javascript_certificate.pdf",
       React: "/src/pdf/react_certificate.pdf",
       Node: "/src/pdf/node_certificate.pdf",
       MongoDB: "/src/pdf/mongodb_certificate.pdf",
@@ -32,84 +31,63 @@ const CertificateModal = ({ skill, onClose, level }) => {
     return pdfMap[skillTitle] || pdfMap["default"]
   }
 
-  // Handle click outside to close modal
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        onClose()
-      }
-    }
-
-    const handleEscapeKey = (event) => {
-      if (event.key === "Escape") {
-        onClose()
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    document.addEventListener("keydown", handleEscapeKey)
-
-    // Prevent body scrolling
-    document.body.style.overflow = "hidden"
-
-    // Set PDF as loaded after a short delay to trigger animation
-    const timer = setTimeout(() => {
-      setPdfLoaded(true)
-    }, 300)
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-      document.removeEventListener("keydown", handleEscapeKey)
-      document.body.style.overflow = "auto"
-      clearTimeout(timer)
-    }
-  }, [onClose])
-
-  // Download certificate as PDF
+  // Fix the download certificate function to handle the PDF correctly
   const downloadCertificate = async () => {
-    const pdfPath = getPdfPath(skill.title)
+    setIsDownloading(true)
+    try {
+      const pdfPath = getPdfPath(skill.title)
 
-    // If we're using an actual PDF, just open it in a new tab
-    window.open(pdfPath, "_blank")
-  }
+      // Create a link element and trigger download
+      const link = document.createElement("a")
+      link.href = pdfPath
+      link.download = `${skill.title}_Certificate.pdf`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
 
-  // Print certificate
-  const printCertificate = () => {
-    const iframe = document.querySelector(".certificate-pdf")
-    if (iframe) {
-      iframe.contentWindow.focus()
-      iframe.contentWindow.print()
+      setIsDownloading(false)
+    } catch (error) {
+      console.error("Error downloading certificate:", error)
+      setIsDownloading(false)
     }
   }
 
   return (
-    <div className="certificate-modal-overlay">
-      <div className="certificate-modal" ref={modalRef}>
-        <button className="certificate-close-btn" onClick={onClose} aria-label="Close certificate">
-          ✕
-        </button>
+    <Dialog open={isOpen} onClose={onClose} className="relative z-50">
+      {/* Background */}
+      <div className="fixed inset-0 bg-black/25" aria-hidden="true" />
 
-        <div className="certificate-container">
-          <div className={`certificate-pdf-container ${pdfLoaded ? "loaded" : ""}`}>
-            <iframe
-              src={getPdfPath(skill.title)}
-              className="certificate-pdf"
-              title={`${skill.title} Certificate`}
-              allowFullScreen={true}
-            />
+      {/* Container */}
+      <div className="fixed inset-0 flex items-center justify-center p-4">
+        {/* Dialog Panel */}
+        <Dialog.Panel className="mx-auto max-w-md rounded bg-white p-6">
+          <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">Download Certificate</Dialog.Title>
+          <div className="mt-2">
+            <p className="text-sm text-gray-500">
+              Click the button below to download your certificate for {skill?.title}.
+            </p>
           </div>
-        </div>
 
-        <div className="certificate-actions">
-          <button className="certificate-download-btn" onClick={downloadCertificate} disabled={isDownloading}>
-            {isDownloading ? "Generating PDF..." : "Download Certificate"}
-          </button>
-          <button className="certificate-print-btn" onClick={printCertificate}>
-            Print Certificate
-          </button>
-        </div>
+          <div className="mt-4 flex justify-end gap-4">
+            <button
+              type="button"
+              className="rounded-md bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-200"
+              onClick={onClose}
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              className="inline-flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-indigo-300 disabled:cursor-not-allowed"
+              onClick={downloadCertificate}
+              disabled={isDownloading}
+            >
+              {isDownloading ? "Downloading..." : "Download"}
+            </button>
+          </div>
+        </Dialog.Panel>
       </div>
-    </div>
+    </Dialog>
   )
 }
 

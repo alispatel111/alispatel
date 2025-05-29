@@ -333,3 +333,26 @@
     font-size: 2rem;
   }
 }
+
+
+.alis-hero-profile-image {
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  opacity: 0.8; /* Start with lower opacity */
+  filter: blur(5px); /* Start with blur effect */
+  transform: scale(0.95); /* Start slightly smaller */
+}
+
+.alis-hero-profile-image.loaded {
+  opacity: 1; /* Fade in when loaded */
+  filter: blur(0); /* Remove blur when loaded */
+  transform: scale(1); /* Scale to normal size */
+}
+
