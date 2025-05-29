@@ -1,23 +1,21 @@
 "use client"
 
 import { useEffect } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
+import Skills from "./components/Skills"
+import Projects from "./components/Projects"
+import Experience from "./components/Experience"
+import Contact from "./components/Contact"
+import NotFound from "./components/NotFound"
 import "./projects.css"
 import "./components/skills-section.css"
 import "./components/certificate.css"
 import "./components/experience.css"
 
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
-import Experience from "./components/Experience"
-import Contact from "./components/Contact"
-
-// import Link from "./components/Link"
-// import SimpleFooter from "./components/SimpleFooter"
-
-const App = () => {
+const MainContent = () => {
   useEffect(() => {
     const isInViewport = (element) => {
       const rect = element.getBoundingClientRect()
@@ -51,10 +49,19 @@ const App = () => {
         <Projects />
         <Experience />
         <Contact />
-        {/* <Link /> */}
-        {/* <SimpleFooter /> */}
       </div>
     </>
+  )
+}
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
