@@ -1,0 +1,22 @@
+/* Only Smooth Scrolling */
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scroll performance */
+html,
+body {
+  overflow-x: hidden;
+}
