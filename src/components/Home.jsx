@@ -1,62 +1,75 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Typed from "typed.js"
+import "./hero-section.css"
+import heroData from "./data/hero.json"
 
 const Home = () => {
-  const typeRef = useRef(null)
+  const resumePdfPath = "/pdf/Resume_Ori.pdf"
+  const heroRef = useRef(null)
 
   useEffect(() => {
-    const options = {
-      strings: ["MERN Stack Dev"],
-      typeSpeed: 50,
-      loop: false,
-      showCursor: true,
-      cursorChar: "",
+    const isInViewport = (element) => {
+      const rect = element.getBoundingClientRect()
+      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 && rect.bottom >= 0
     }
 
-    const typed = new Typed(typeRef.current, options)
-
-    // Optimize hero image loading
-    const heroImage = document.querySelector(".alis-hero-profile-image")
-    if (heroImage) {
-      // Add loading priority
-      heroImage.loading = "eager"
-      heroImage.fetchPriority = "high"
-
-      // Add onload handler
-      heroImage.onload = () => {
-        heroImage.classList.add("loaded")
+    const handleScrollAnimation = () => {
+      if (heroRef.current && isInViewport(heroRef.current)) {
+        heroRef.current.classList.add("active")
       }
     }
 
+    handleScrollAnimation()
+    window.addEventListener("scroll", handleScrollAnimation)
+
     return () => {
-      typed.destroy()
+      window.removeEventListener("scroll", handleScrollAnimation)
     }
   }, [])
 
   return (
-    <section id="home" className="home">
-      <div className="container">
-        <div className="home-wrapper">
-          <div className="home-text">
-            <h1>Hi, I'm Alisher</h1>
-            <h2 ref={typeRef}></h2>
-            <p>
-              I am a full-stack web developer with a passion for creating dynamic and user-friendly web applications.
-            </p>
-            <div className="home-buttons">
-              <a href="#about" className="btn btn-primary">
-                About Me
-              </a>
-              <a href="#projects" className="btn btn-secondary">
-                Projects
-              </a>
-            </div>
-          </div>
-          <div className="home-image">
-            <img src="/images/profile.jpg" alt="Alisher" className="alis-hero-profile-image" />
-          </div>
+    <section className="alis-hero-main-section" id="home" ref={heroRef}>
+      {/* Background Elements */}
+      <div className="alis-hero-floating-shapes">
+        <div className="alis-hero-shape alis-hero-shape-1"></div>
+        <div className="alis-hero-shape alis-hero-shape-2"></div>
+        <div className="alis-hero-shape alis-hero-shape-3"></div>
+        <div className="alis-hero-shape alis-hero-shape-4"></div>
+      </div>
+
+      {/* Left Content */}
+      <div className="alis-hero-content-left alis-hero-slide-left">
+        <h1 className="alis-hero-main-title">
+          Hi, I'm <span className="highlight">Alis Patel</span>
+          <br />
+          MERN Stack Developer
+        </h1>
+        <p className="alis-hero-description">
+          I'm a passionate full-stack developer specializing in building exceptional digital experiences. With expertise
+          in React, Node.js, and modern web technologies, I create responsive and user-friendly applications that solve
+          real-world problems.
+        </p>
+        <a
+          href={resumePdfPath}
+          className="alis-hero-download-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Alis_Patel_Resume.pdf"
+        >
+          Download Resume
+        </a>
+      </div>
+
+      {/* Right Content */}
+      <div className="alis-hero-content-right alis-hero-fade-in">
+        <div className="alis-hero-image-container alis-hero-zoom-in">
+          <img
+            src={`/assets/${heroData.imgSrc}`}
+            alt="Alis Patel"
+            className="alis-hero-profile-image"
+            loading="eager"
+          />
         </div>
       </div>
     </section>

@@ -10,23 +10,23 @@ const CertificateModal = ({ skill, onClose, level }) => {
   // Get the PDF path based on skill title
   const getPdfPath = (skillTitle) => {
     const pdfMap = {
-      HTML: "/src/pdf/html_certificate.pdf",
-      CSS: "/src/pdf/css_certificate.pdf",
-      Javascript: "/src/pdf/javascript_certificate.pdf",
-      React: "/src/pdf/react_certificate.pdf",
-      Node: "/src/pdf/node_certificate.pdf",
-      MongoDB: "/src/pdf/mongodb_certificate.pdf",
-      "Express.js": "/src/pdf/express_certificate.pdf",
-      "Git & GitHub": "/src/pdf/github_certificate.pdf",
-      Redux: "/src/pdf/redux_certificate.pdf",
-      "Tailwind CSS": "/src/pdf/tailwind_certificate.pdf",
-      Postman: "/src/pdf/postman_certificate.pdf",
-      Mongoose: "/src/pdf/mongoose_certificate.pdf",
-      "REST API": "/src/pdf/api_certificate.pdf",
-      Vercel: "/src/pdf/vercel_certificate.pdf",
-      "Firebase Auth": "/src/pdf/firebase_certificate.pdf",
+      HTML: "/pdf/html_certificate.pdf",
+      CSS: "/pdf/css_certificate.pdf",
+      Javascript: "/pdf/Javascript_certificate.pdf",
+      React: "/pdf/react_certificate.pdf",
+      Node: "/pdf/node_certificate.pdf",
+      MongoDB: "/pdf/mongodb_certificate.pdf",
+      "Express.js": "/pdf/express_certificate.pdf",
+      "Git & GitHub": "/pdf/github_certificate.pdf",
+      Redux: "/pdf/redux_certificate.pdf",
+      "Tailwind CSS": "/pdf/tailwind_certificate.pdf",
+      Postman: "/pdf/postman_certificate.pdf",
+      Mongoose: "/pdf/mongoose_certificate.pdf",
+      "REST API": "/pdf/api_certificate.pdf",
+      Vercel: "/pdf/vercel_certificate.pdf",
+      "Firebase Auth": "/pdf/firebase_certificate.pdf",
       // Default to a general certificate if no specific one is found
-      default: "/src/pdf/Resume_Ori.pdf",
+      default: "/pdf/Resume_Ori.pdf",
     }
 
     return pdfMap[skillTitle] || pdfMap["default"]
