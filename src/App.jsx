@@ -59,7 +59,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainContent />} />
-        <Route path="/p" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
