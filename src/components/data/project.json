@@ -44,7 +44,7 @@
     "title": "QuizMaster",
       "description": "QuizMaster is a modern and interactive frontend-only quiz application built with React. It features a level-based quiz system (Easy, Medium, Hard), dynamic questions, real-time feedback, and a performance history tracker using localStorage. Upon successful completion, users are awarded a professionally designed certificate which can be downloaded. The app includes a smooth UI/UX with animated transitions, light/dark theme toggle, progress bar, result review, and category-wise scoring analysis — all without using any backend.",
     "imageSrc": "assets/hero/quizmaster.png",
-    "demo": "https://quizmaster-tawny.vercel.app",
+    "demo": "https://quizmaster-tawny.vercel.app/",
     "source": "https://github.com/alispatel111/quizmaster",
     "category": "Frontend",
     "tags": ["React", 
