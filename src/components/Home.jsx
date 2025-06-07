@@ -40,11 +40,11 @@ const Home = () => {
 
       {/* Left Content */}
       <div className="alis-hero-content-left alis-hero-slide-left">
-{/*         <h1 className="alis-hero-main-title">
+        <h1 className="alis-hero-main-title">
           Hi, I'm <span className="highlight">Alis Patel</span>
           <br />
           MERN Stack Developer
-        </h1> */}
+        </h1>
         <p className="alis-hero-description">
           I'm a passionate full-stack developer specializing in building exceptional digital experiences. With expertise
           in React, Node.js, and modern web technologies, I create responsive and user-friendly applications that solve
