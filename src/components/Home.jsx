@@ -41,7 +41,7 @@ const Home = () => {
       {/* Left Content */}
       <div className="alis-hero-content-left alis-hero-slide-left">
         <h1 className="alis-hero-main-title">
-          Hi, I'm <span className="highlight">Alis Patel</span>
+{/*           Hi, I'm <span className="highlight">Alis Patel</span> */}
           <br />
           MERN Stack Developer
         </h1>
