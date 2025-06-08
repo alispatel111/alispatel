@@ -545,37 +545,6 @@
   }
 }
 
-/* Responsive for AlispPatel Green Tick */
-@media (max-width: 768px) {
-  .alispatel-green-tick-circle {
-    width: 130px !important;
-    height: 130px !important;
-  }
-
-  .alispatel-green-tick-mark {
-    font-size: 4rem !important;
-  }
-
-  .alispatel-green-tick-text {
-    font-size: 1.8rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .alispatel-green-tick-circle {
-    width: 110px !important;
-    height: 110px !important;
-  }
-
-  .alispatel-green-tick-mark {
-    font-size: 3rem !important;
-  }
-
-  .alispatel-green-tick-text {
-    font-size: 1.4rem !important;
-  }
-}
-
 /* Success Modal Styles - FIXED Z-INDEX */
 .contact-success-overlay {
   position: fixed;
@@ -836,48 +805,6 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-main-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .contact-main-header h1 {
-    font-size: 2.5rem;
-  }
-  .contact-info-card,
-  .contact-main-form {
-    padding: 2rem;
-  }
-  .contact-success-modal {
-    padding: 2rem;
-  }
-  .contact-main-container {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-main-header h1 {
-    font-size: 2rem;
-  }
-  .contact-info-card,
-  .contact-main-form {
-    padding: 1.5rem;
-  }
-  .contact-info-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-  .contact-success-modal {
-    padding: 1.5rem;
-  }
-  .contact-social-icons {
-    justify-content: center;
-  }
-}
-
 /* ===== FLOATING INPUT FIELD STYLES ===== */
 .floating-input-container {
   margin-bottom: 2rem;
@@ -1016,39 +943,4 @@
 /* Update submit button to work with new layout */
 .contact-submit-button {
   margin-top: 1rem;
-}
-
-/* Responsive design for floating inputs */
-@media (max-width: 768px) {
-  .floating-input-field {
-    padding: 0.875rem;
-    font-size: 0.95rem;
-  }
-
-  .floating-input-label {
-    font-size: 0.95rem;
-  }
-
-  .floating-input-label.floating {
-    font-size: 0.8rem;
-  }
-
-  .floating-input-container {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .floating-input-field {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .floating-input-label {
-    font-size: 0.9rem;
-  }
-
-  .floating-input-label.floating {
-    font-size: 0.75rem;
-  }
 }
