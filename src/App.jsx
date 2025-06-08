@@ -1,21 +1,26 @@
 "use client"
 
-import { useEffect } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useEffect, useState } from "react"
 import "./App.css"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
-import Experience from "./components/Experience"
-import Contact from "./components/Contact"
-import NotFound from "./components/NotFound"
 import "./projects.css"
 import "./components/skills-section.css"
 import "./components/certificate.css"
 import "./components/experience.css"
+import "./responsive.css"
+import Preloader from "./components/Preloader"
+import BackToTop from "./components/BackToTop"
 
-const MainContent = () => {
+import Skills from "./components/Skills"
+import Projects from "./components/Projects"
+import Experience from "./components/Experience"
+import Contact from "./components/Contact"
+import SocialLinks from "./components/SocialLinks"
+
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     const isInViewport = (element) => {
       const rect = element.getBoundingClientRect()
@@ -32,13 +37,23 @@ const MainContent = () => {
       })
     }
 
-    handleScrollAnimation()
-    window.addEventListener("scroll", handleScrollAnimation)
+    if (!isLoading) {
+      handleScrollAnimation()
+      window.addEventListener("scroll", handleScrollAnimation)
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScrollAnimation)
     }
-  }, [])
+  }, [isLoading])
+
+  const handlePreloaderComplete = () => {
+    setIsLoading(false)
+  }
+
+  if (isLoading) {
+    return <Preloader onComplete={handlePreloaderComplete} />
+  }
 
   return (
     <>
@@ -49,19 +64,10 @@ const MainContent = () => {
         <Projects />
         <Experience />
         <Contact />
+        <SocialLinks />
       </div>
+      <BackToTop />
     </>
-  )
-}
-
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainContent />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
   )
 }
 
