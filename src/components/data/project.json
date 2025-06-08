@@ -1,0 +1,106 @@
+[
+  {
+    "key": 1,
+    "title": "Dashboard",
+    "description": "Dashboard, built with React, features interactive charts, graphs, and data visualization tools for effective monitoring and analysis.",
+    "imageSrc": "assets/hero/logo.jpg",
+    "demo": "https://dashboard-beta-rose.vercel.app/",
+    "source": "https://github.com/alispatel111/Dashboard",
+    "category": "web",
+    "tags": ["React", "Charts", "Dashboard"],
+    "date": "2023",
+    "status": "Completed",
+    "featured": true,
+    "techIcons": ["/assets/icons/react.png", "/assets/icons/chart.png", "/assets/icons/dashboard.png"]
+  },
+  {
+    "key": 2,
+    "title": "TODO List",
+    "description": "Todo List application using React, with Toastify integrated for displaying notifications. Features task management with add, edit, delete, and mark as complete functionality.",
+    "imageSrc": "assets/hero/todo.jpg",
+    "demo": "https://todoapp-umber-one.vercel.app",
+    "source": "https://github.com/alispatel111/todoapp",
+    "category": "web",
+    "tags": ["React", "Toastify", "Task Management"],
+    "date": "2024",
+    "status": "Completed",
+    "techIcons": ["/assets/icons/react.png", "/assets/icons/javascript.png", "/assets/icons/html.png"]
+  },
+  {
+    "key": 3,
+    "title": "Banking Website",
+    "description": "Hoobank is a banking application that provides a user-friendly interface. Features modern design, responsive layout, and simulated banking functionality.",
+    "imageSrc": "assets/hero/bank.png",
+    "demo": "https://bank-demo-mu.vercel.app/",
+    "source": "https://github.com/alispatel111/Bank-website",
+    "category": "design",
+    "tags": ["React", "Banking", "UI/UX"],
+    "date": "2023",
+    "status": "Completed",
+    "techIcons": ["/assets/icons/react.png", "/assets/icons/css.png", "/assets/icons/javascript.png"]
+  },
+  {
+    "key": 4,
+    "title": "QuizMaster",
+      "description": "QuizMaster is a modern and interactive frontend-only quiz application built with React. It features a level-based quiz system (Easy, Medium, Hard), dynamic questions, real-time feedback, and a performance history tracker using localStorage. Upon successful completion, users are awarded a professionally designed certificate which can be downloaded. The app includes a smooth UI/UX with animated transitions, light/dark theme toggle, progress bar, result review, and category-wise scoring analysis — all without using any backend.",
+    "imageSrc": "assets/hero/quizmaster.png",
+    "demo": "https://quizmaster-tawny.vercel.app",
+    "source": "https://github.com/alispatel111/quizmaster",
+    "category": "Frontend",
+    "tags": ["React", 
+    "JavaScript",  
+    "Frontend-only"],
+    "date": "January 2025",
+    "status": "Completed",
+    "techIcons": ["/assets/icons/vue.png", "/assets/icons/firebase.png", "/assets/icons/database.png"]
+  },
+  {
+  "key": 6,
+  "title": "Rapid Typing Test",
+  "description": "A frontend-only typing speed test application built with React. Tracks typing speed (WPM), accuracy, and provides a digital certificate on successful completion. Includes auto-level progression (Easy → Medium → Hard), visual progress tracking, and social sharing. No backend required.",
+  "imageSrc": "assets/hero/typing speed image.jpg", 
+  "demo": "https://your-live-demo-link.com",       
+  "source": "https://github.com/yourusername/rapid-typing",
+  "category": "Frontend",
+  "tags": ["React", "JavaScript", "HTML", "CSS"],
+  "date": "May 2025",
+  "status": "Completed",
+  "featured": true,
+  "techIcons": ["/assets/icons/react.png", "/assets/icons/javascript.png","/assets/icons/css.png"
+  ]
+}
+,
+  {
+    "key": 7,
+    "title": "MERN Auth",
+    "description": "A secure and full-featured authentication system built with the MERN stack. It includes Login, Signup, Forgot Password, and a protected Dashboard with full CRUD operations. Designed with a clean light theme and integrated with JWT authentication and bcrypt encryption for security.",
+    "imageSrc": "/assets/hero/MERN.png",
+    "demo": "https://mern-auth-client-eta.vercel.app/login",
+    "source": "https://github.com/alispatel111/mern-auth/tree/main",
+    "category": "web",
+    "tags": ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Bcrypt"],
+    "date": "December 2024",
+    "status": "Completed",
+    "featured": false,
+    "techIcons": ["/assets/icons/mongodb.png", "/assets/icons/express.png", "/assets/icons/react.png"]
+  },
+  {
+  "key": 8,
+  "title": "Weather Forecast App",
+  "description": "A responsive weather application built using React, HTML, CSS, and JavaScript. Fetches real-time weather data from an external API. Displays temperature, humidity, wind speed, and weather conditions based on user location or city search. Clean UI with responsive design.",
+  "imageSrc": "/assets/hero/weather.jpg", 
+  "demo": "https://your-live-demo-link.com",      
+  "source": "https://github.com/yourusername/weather-app", 
+  "category": "Frontend",
+  "tags": ["React", "JavaScript", "HTML", "CSS", "API"],
+  "date": "March 2025",
+  "status": "Completed",
+  "featured": true,
+  "techIcons": [
+    "/assets/icons/react.png",
+    "/assets/icons/html.png",
+    "/assets/icons/css.png"
+  ]
+}
+
+]
