@@ -160,12 +160,14 @@
   color: white;
 }
 
-.contact-social-icon.contact-facebook {
-  background: linear-gradient(135deg, #1877f2, #42a5f5);
+.contact-social-icon.contact-email {
+  background: linear-gradient(135deg, #ea4335, #d33b2c);
 }
-.contact-social-icon.contact-twitter {
-  background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+
+.contact-social-icon.contact-x {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
 }
+
 .contact-social-icon.contact-instagram {
   background: linear-gradient(135deg, #e4405f, #fd1d1d, #fcb045);
 }
@@ -873,5 +875,180 @@
   }
   .contact-social-icons {
     justify-content: center;
+  }
+}
+
+/* ===== FLOATING INPUT FIELD STYLES ===== */
+.floating-input-container {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.floating-input-wrapper {
+  position: relative;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-input-field {
+  width: 100%;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 2px solid #020c27;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.floating-input-field:focus {
+  /* border-color: #ef4444; */
+  /* box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1); */
+}
+
+.floating-input-field.textarea {
+  resize: vertical;
+  min-height: 140px;
+  padding-top: 1.5rem;
+}
+
+.floating-input-label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 500;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  padding: 0 0.25rem;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+.floating-input-wrapper.textarea .floating-input-label {
+  top: 1.5rem;
+  transform: translateY(0);
+}
+
+.floating-input-label.floating,
+.floating-input-wrapper.floating .floating-input-label {
+  top: 0;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  /* color: #ef4444; */
+  font-weight: 600;
+  background: #ffffff;
+  padding: 0 0.5rem;
+}
+
+/* Hover effects for floating inputs */
+.floating-input-wrapper:hover .floating-input-field {
+  /* border-color: #dc2626; */
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.1);
+}
+
+.floating-input-wrapper:hover .floating-input-label {
+  /* color: #dc2626; */
+}
+
+/* Focus effects for floating inputs */
+.floating-input-field:focus + .floating-input-label,
+.floating-input-wrapper.floating .floating-input-label {
+  /* color: #ef4444; */
+}
+
+/* Placeholder styling for floating inputs */
+.floating-input-field::placeholder {
+  color: #9ca3af;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floating-input-field:focus::placeholder,
+.floating-input-wrapper.floating .floating-input-field::placeholder {
+  opacity: 1;
+}
+
+/* Animation for smooth label transitions */
+@keyframes labelFloat {
+  from {
+    top: 50%;
+    font-size: 1rem;
+    transform: translateY(-50%);
+  }
+  to {
+    top: 0;
+    font-size: 0.875rem;
+    transform: translateY(-50%);
+  }
+}
+
+.floating-input-label.floating {
+  animation: labelFloat 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Accessibility improvements for floating inputs */
+.floating-input-field:focus {
+  outline: none;
+}
+
+.floating-input-wrapper:focus-within {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Remove old form styles that conflict */
+.contact-form-group {
+  display: none;
+}
+
+.contact-input-wrapper {
+  display: none;
+}
+
+/* Update submit button to work with new layout */
+.contact-submit-button {
+  margin-top: 1rem;
+}
+
+/* Responsive design for floating inputs */
+@media (max-width: 768px) {
+  .floating-input-field {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .floating-input-label {
+    font-size: 0.95rem;
+  }
+
+  .floating-input-label.floating {
+    font-size: 0.8rem;
+  }
+
+  .floating-input-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-input-field {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .floating-input-label {
+    font-size: 0.9rem;
+  }
+
+  .floating-input-label.floating {
+    font-size: 0.75rem;
   }
 }
