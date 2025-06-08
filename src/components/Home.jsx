@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useCallback } from "react"
-import pdf from "/pdf/Resume_Ori.pdf"
+import pdf from "/pdf/alis resume.pdf"
 import hero from "./data/hero.json"
 import Typed from "typed.js"
 import "./hero-section.css"
