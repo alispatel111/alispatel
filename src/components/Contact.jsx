@@ -234,7 +234,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-info-details">
                     <h4>Phone</h4>
-                    <p>+91*8511231514</p>
+                    <p>+91-8511231514</p>
                   </div>
                 </div>
 
@@ -263,9 +263,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="contact-social-section">
-                <h4>Follow Me</h4>
-                <div className="contact-social-icons">
+              <div className="contact-social-sections">
+                {/* <h4>Follow Me</h4> */}
+                {/* <div className="contact-social-icons">
                   <a
                     href="mailto:your.email@gmail.com"
                     className="contact-social-icon contact-email"
@@ -309,7 +309,7 @@ const Contact = () => {
                   >
                     <FaGithub />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
