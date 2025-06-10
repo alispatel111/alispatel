@@ -66,7 +66,7 @@ const Experience = () => {
     },
     {
       id: 2,
-      role: "MERN Stack Developer",
+      role: "Intern MERN Stack Developer",
       company: "FlyAnyTrip",
       companyLogo: "/assets/company/flyanytrip.png",
       location: "Office",
