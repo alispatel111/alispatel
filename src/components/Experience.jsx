@@ -97,7 +97,7 @@ const Experience = () => {
       company: "FlyAnyTrip",
       companyLogo: "/assets/company/flyanytrip.png",
       location: "Vadodara (Office)",
-      startDate: "July 2024",
+      startDate: "July 2025",
       endDate: "Present",
       description:
         "Currently working on the admin panel of a travel platform using the MERN stack. Built features that allow admins to manage travel packages without editing code manually. Implemented image and PDF upload, toast notifications, and role-based access control.",
