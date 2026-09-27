@@ -39,68 +39,104 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Summer Internship',
-      company: 'ByteXL',
-      duration: 'Summer 2023',
-      location: 'Remote',
-      type: 'Internship',
-      description: 'Developed web applications using MERN stack.',
+      title: 'Full Stack Developer',
+      company: 'Pratham International',
+      duration: 'Jul 2026 – Present',
+      location: 'Vadodara, India',
+      type: 'Full-time',
+      description: 'Architecting and developing an enterprise Lead Management & CRM platform using React.js, TypeScript, Node.js, Express.js, and PostgreSQL to streamline lead capture, tracking, and query lifecycle workflows.',
       detailedDescription: [
-        'Built e-commerce platform',
-        'Implemented user authentication',
-        'Created responsive design',
-        'Integrated MongoDB'
+        'Architected and developed an enterprise Lead Management & CRM Platform using React.js, TypeScript, Node.js, Express.js, and PostgreSQL to streamline lead capture, tracking, and query lifecycle workflows.',
+        'Implemented Redis caching with the Cache-Aside pattern for lead listings and queries, reducing API latency by 45% and significantly optimizing database loads.',
+        'Engineered real-time Lead & Query Timeline audit tracking with Socket.io, enabling instantaneous synchronization during lead escalations, follow-ups, and team handoffs.',
+        'Enforced granular Role-Based Access Control (RBAC) and JWT authentication, ensuring strict lead data isolation and permission governance across agents, managers, and admins.'
       ],
-      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB'],
-      color: '#059669',
-      icon: Building,
+      tech: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Redis', 'Socket.io', 'JWT Auth', 'RBAC'],
+      color: '#2563EB',
+      badgeGradient: 'linear-gradient(45deg, #2563EB, #06B6D4)',
+      icon: Rocket,
       achievements: [
-        'Built 3 complete applications',
-        'Learned full-stack development',
-        'Mastered MERN fundamentals'
+        'Reduced API latency by 45% using Redis caching with Cache-Aside pattern',
+        'Engineered real-time audit synchronization with Socket.io',
+        'Built enterprise-grade RBAC security across agents, managers & admins',
+        'Optimized query pipelines and lead lifecycle workflows'
       ],
       responsibilities: [
-        'Learning MERN stack',
-        'Building demo applications',
-        'Understanding SDLC',
-        'Code implementation'
+        'Enterprise Lead Management & CRM architecture',
+        'Full-stack development with React, TypeScript & Node.js',
+        'Database design & indexing with PostgreSQL',
+        'Redis caching strategy & performance engineering'
+      ],
+      links: []
+    },
+    {
+      id: 2,
+      title: 'Junior MERN Stack Developer',
+      company: 'FlyAnyTrip',
+      duration: 'Apr 2025 – Jun 2026',
+      location: 'Vadodara, India',
+      type: 'Full-time',
+      description: 'Spearheaded technical rollout of BiologyTrunk LMS on the MERN stack supporting 5,000+ active students with 99.9% uptime, and delivered an administrative dashboard reducing data overhead by 30%.',
+      detailedDescription: [
+        'Spearheaded the technical rollout of BiologyTrunk LMS on the MERN stack supporting 5,000+ active students with 99.9% uptime.',
+        'Delivered an Administrative Dashboard using React.js and Node.js, reducing internal data management overhead by 30%.',
+        'Optimized MongoDB aggregation pipelines and Mongoose queries, achieving a 15% improvement in API response times.',
+        'Engineered dedicated dashboards for faculty to manage courses and track student enrollments, and an intuitive student learning portal.',
+        'Implemented secure payment gateway for course purchases and transactions with role-based authentication.'
+      ],
+      tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS', 'Socket.io', 'Mongoose'],
+      color: '#7C3AED',
+      badgeGradient: 'linear-gradient(45deg, #7C3AED, #8B5CF6)',
+      icon: Code,
+      achievements: [
+        'Supported 5,000+ active students with 99.9% uptime',
+        'Reduced internal data management overhead by 30%',
+        '15% improvement in API response times via MongoDB aggregation tuning',
+        'Reduced page load time by 65%'
+      ],
+      responsibilities: [
+        'Full-stack MERN development',
+        'Admin, faculty, and student dashboard design',
+        'Database query optimization & aggregation pipelines',
+        'Secure payment gateway integration'
       ],
       links: [
         {
-          text: 'Certificate',
-          url: 'https://drive.google.com/file/d/12G-t03kzAkn7U_KslpBucwAcyyA1XFzt/view',
+          text: 'View Website',
+          url: 'https://biologytrunk.in',
           icon: <ExternalLink className="w-4 h-4" />
         }
       ]
     },
     {
-      id: 2,
-      title: 'Intern MERN Stack Developer',
+      id: 3,
+      title: 'MERN Stack Developer Intern',
       company: 'FlyAnyTrip',
-      duration: 'Jan 2025 - March 2025',
-      location: 'In Office',
+      duration: 'Jan 2025 – Mar 2025',
+      location: 'Vadodara, India',
       type: 'Internship',
-      description: 'TripEasy is a comprehensive travel technology platform developed to simplify trip planning and booking. The primary focus was on delivering an intuitive, user-friendly experience that seamlessly guides users from discovery to booking.',
+      description: 'Promoted to Junior Developer in 3 months for delivering mission-critical modules ahead of schedule. Integrated Razorpay Payment Gateway with webhook verification in Node.js, processing $5,000+ in initial transactions.',
       detailedDescription: [
-        'MERN stack–based travel platform.',
-        'Custom travel package creation.',
-        'Secure Payment-gateway integration.',
-        'Automated invoice generation.',
-        'Fully responsive design across all devices.'
+        'Promoted to Junior Developer in 3 months for delivering mission-critical application modules ahead of schedule.',
+        'Integrated Razorpay Payment Gateway with webhook verification in Node.js, processing $5,000+ in initial transactions.',
+        'Designed and built core features for TripEasy full-stack MERN travel portal including custom travel package creation and automated invoice generation.',
+        'Ensured fully responsive design across all devices and achieved smooth user checkout flows.'
       ],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind', 'REST API'],
-      color: '#7C3AED',
-      icon: Code,
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Razorpay', 'Tailwind CSS', 'REST API'],
+      color: '#0284C7',
+      badgeGradient: 'linear-gradient(45deg, #0284C7, #38BDF8)',
+      icon: Zap,
       achievements: [
-        'Improved booking process by 50%',
-        'Handled 5K+ monthly bookings',
-        '95% user satisfaction'
+        'Promoted to Junior Developer in 3 months',
+        'Processed $5,000+ in initial transactions with zero failures',
+        'Improved booking process turnaround time by 50%',
+        '95% user satisfaction rate'
       ],
       responsibilities: [
-        'Frontend development',
-        'Backend API development',
-        'Database design',
-        'Payment integration'
+        'Payment gateway integration & webhook handling',
+        'Frontend UI development with React',
+        'Backend REST API development & database design',
+        'Cross-browser and mobile responsiveness testing'
       ],
       links: [
         {
@@ -111,49 +147,46 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
-      title: 'MERN Stack Developer',
-      company: 'FlyAnyTrip',
-      duration: 'April 2025 - Present',
-      location: 'Vadodara',
-      type: 'Full-time',
-      description: 'Developed a comprehensive admin panel for BiologyTrunk (a learning management platform) using the MERN stack, enabling role-based management of courses, users, and content.',
+      id: 4,
+      title: 'Web Development Intern',
+      company: 'ByteXL',
+      duration: 'Summer 2023',
+      location: 'Remote',
+      type: 'Internship',
+      description: 'Developed full-stack web applications using MERN stack, built e-commerce application prototypes, and implemented secure user authentication.',
       detailedDescription: [
-        'Designed Admin Panel: Created a centralized dashboard with complete CRUD operations to manage users, faculty, courses, payments, and platform content.',
-        'Faculty Panel: Created a dedicated dashboard for faculty to develop, manage, publish courses, and track student enrollments and progress.',
-        'Student Panel: Developed an intuitive dashboard for students to access courses, monitor learning progress, and view payment history.',
-        'Payment Integration: Implemented a secure payment gateway for course purchases and transactions, ensuring encrypted and role-based payment authentication.',
-        'Code Quality: Maintained clean, scalable, and well-structured code across all panels for ease of maintenance and future enhancements.'
-
+        'Built full-stack e-commerce and web application prototypes using React, Node.js, and MongoDB.',
+        'Implemented secure user authentication and role-based validation.',
+        'Created responsive, mobile-first web designs with clean UI components.',
+        'Learned full-stack development best practices and SDLC fundamentals.'
       ],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind', 'Socket.io'],
-      color: '#2563EB',
-      icon: Rocket,
+      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB'],
+      color: '#059669',
+      badgeGradient: 'linear-gradient(45deg, #059669, #10B981)',
+      icon: Building,
       achievements: [
-        'Reduced page load time by 65%',
-        'Implemented features for 10K+ users',
-        'Achieved 99.9% uptime'
+        'Built 3 complete full-stack applications',
+        'Learned MERN stack and REST API fundamentals',
+        'Successfully completed internship with certificate'
       ],
       responsibilities: [
-        'Full-stack development',
-        'API design',
-        'Database optimization',
-        'Team collaboration'
+        'Learning full-stack development',
+        'Building demo web applications',
+        'Understanding SDLC workflows',
+        'Code implementation and debugging'
       ],
       links: [
         {
-          text: 'View Website',
-          url: 'https://biologytrunk.in',
+          text: 'Certificate',
+          url: 'https://drive.google.com/file/d/12G-t03kzAkn7U_KslpBucwAcyyA1XFzt/view',
           icon: <ExternalLink className="w-4 h-4" />
         }
       ]
-    },
-
-
+    }
   ];
 
   const stats = [
-    { value: '3+', label: 'Roles', icon: Briefcase },
+    { value: '4+', label: 'Roles', icon: Briefcase },
     { value: '50+', label: 'Projects', icon: Code },
     { value: '99%', label: 'Satisfaction', icon: Award },
     { value: '15k+', label: 'Commits', icon: GitCommit },
@@ -390,9 +423,7 @@ const Experience = () => {
                           <span
                             className="px-3 py-1 rounded-full text-xs font-semibold shadow-md"
                             style={{
-                              background: exp.id === 1 ? 'linear-gradient(45deg, #3b82f6, #8b5cf6)' :
-                                exp.id === 2 ? 'linear-gradient(45deg, #7C3AED, #8B5CF6)' :
-                                  'linear-gradient(45deg, #059669, #10B981)',
+                              background: exp.badgeGradient || 'linear-gradient(45deg, #2563EB, #06B6D4)',
                               color: 'white'
                             }}
                           >

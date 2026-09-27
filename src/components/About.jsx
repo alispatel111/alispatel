@@ -27,9 +27,10 @@ export default function About() {
 
     ];
     const experiences = [
-        { year: '2023-Present', title: 'Senior Frontend Developer', company: 'TechCorp Inc.', desc: 'Leading frontend architecture for enterprise applications' },
-        { year: '2021-2023', title: 'Full Stack Developer', company: 'Digital Solutions', desc: 'Built full-stack applications for various clients' },
-        { year: '2019-2021', title: 'Junior Developer', company: 'WebStart Agency', desc: 'Started career building responsive websites' },
+        { year: 'Jul 2026 - Present', title: 'Full Stack Developer', company: 'Pratham International', desc: 'Architected enterprise Lead Management & CRM platform with Redis caching, Socket.io audit tracking, and RBAC.' },
+        { year: 'Apr 2025 - Jun 2026', title: 'Junior MERN Stack Developer', company: 'FlyAnyTrip', desc: 'Spearheaded technical rollout of BiologyTrunk LMS supporting 5,000+ active students and built administrative dashboards.' },
+        { year: 'Jan 2025 - Mar 2025', title: 'MERN Stack Developer Intern', company: 'FlyAnyTrip', desc: 'Engineered Razorpay payment gateway integration with webhooks and developed core features for TripEasy travel portal.' },
+        { year: 'Summer 2023', title: 'Web Development Intern', company: 'ByteXL', desc: 'Developed full-stack web applications and learned MERN stack architectural fundamentals.' },
     ];
 
     const stats = [
@@ -263,9 +264,9 @@ export default function About() {
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Alis Patel</h3>
                                     <p className="text-gray-600 mb-4 leading-relaxed">
-                                        Hi! I'm a passionate MERN Stack Developer with expertise in creating
-                                        modern, scalable web applications. I love transforming complex problems
-                                        into simple, beautiful designs.
+                                        Hi! I'm a passionate Full Stack & MERN Developer with expertise in building
+                                        modern, scalable enterprise web applications, CRM platforms, real-time architectures,
+                                        and high-performance backend systems.
                                     </p>
                                     <div className="flex flex-wrap items-center gap-3 text-sm">
                                         <span className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-full font-medium border border-blue-200">

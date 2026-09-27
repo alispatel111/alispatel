@@ -167,7 +167,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-md">
-              I create modern web applications using the MERN stack. 
+              I create modern web applications and enterprise platforms using React, Node.js, and TypeScript. 
               Passionate about building efficient, scalable solutions with clean code 
               and great user experiences.
             </p>
