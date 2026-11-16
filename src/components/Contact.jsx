@@ -52,9 +52,9 @@ const Contact = () => {
   }, [submitted, showSuccessModal]);
 
   // EmailJS initialization
-  const EMAILJS_SERVICE_ID = "service_emu2xai";
-  const EMAILJS_TEMPLATE_ID = "template_kg970bi";
-  const EMAILJS_PUBLIC_KEY = "SVKz-D0cD8hn6RRgw";
+  const EMAILJS_SERVICE_ID = "service_u8rqg5i";
+  const EMAILJS_TEMPLATE_ID = "template_87pl67d";
+  const EMAILJS_PUBLIC_KEY = "EnyVgOOwsfE5HJfoz";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
